@@ -4,9 +4,22 @@ server:
 spring:
   application:
     name: config-service
+#  rabbitmq:
+#    host: 127.0.0.1
+#    port: 5672
+#    username: guest
+#    password: guest
   cloud:
     config:
       server:
         git:
-          uri: file:///C:/Users/Js/Desktop/git-local-repo
+#          uri: file:///C:/Users/Js/Desktop/git-local-repo
+          uri: https://github.com/ewhdtls0/E-commerce-config
+        native:
+#          search-locations: path # 파일 정보 시스템에서 가져오는 방법
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
